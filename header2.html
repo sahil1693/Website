@@ -1,0 +1,86 @@
+<html>
+<head>
+<style>
+.menu_text{
+	font-family: 'Pacifico', cursive; 
+	font-size: 25px;
+	}
+.menu_bg{
+	background:white url(header.jpg);	
+	height:130px;
+	width:100%;
+	padding-bottom: 30px;
+	position:relative;
+	}
+a{
+	text-decoration:none;
+	color:white;
+}
+.dropdown {
+  float: left;
+}
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: blue;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+	<div class="menu_bg" style="overflow:hidden">
+	<div class="menu_text" style="float:left; margin-left: 5%; margin-top:3%">
+		<div class="dropdown">
+		<img src="logo1.png" class="dropbtn" align="right" alt="Play logo"  width="200" height="90">
+		<i class="fa fa-caret-down"></i>
+		<div class="dropdown-content">
+      <a href="sign.html" target="second">Sign Up</a>
+      <a href="login.html" target="second">Log In</a>
+    </div>
+	</div>
+		</div>
+	<div class="menu_text" style="float:right; margin-right:84px; margin-top:6%">
+		<a href="contact.html" target="second">contact us</a>
+	</div>
+	<div class="menu_text" style="float:right; margin-right: 74px; margin-top:6%">
+		<a href="3.html" target="second">artists</a>
+	</div>
+	<div class="menu_text" style="float:right; margin-right: 62px; margin-top:6%">
+		<a href="2.html" target="second">playlists</a>
+	</div>
+	<div class="menu_text" style="float:right; margin-right: 50px; margin-top:6%;">
+		<a href="1.html" target="second">trending</a>
+	</div>
+</div>
+</body>
+</html>

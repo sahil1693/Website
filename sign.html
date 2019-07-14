@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>
+login
+</title>
+<style>
+span{
+color:black;
+}
+.top-wrapper{
+padding: 100px 50 100px 50;
+  background-size: cover;
+  text-align: center;
+color:black;
+}
+</style>
+</head>
+<body>
+	<div class="top-wrapper">
+ 	<center>
+	<fieldset style="width:50%; background-color:lightgrey; padding-top:10px">
+	<legend><i><b><span style="font-size:25px; ">Create New Account</span></b></i></legend>
+	  <div class="container">
+		<form action="login.php" onsubmit="return doValidations(this)">
+	<pre>
+<span style="font-size:20px"><b><i>FirstName:    </i></b></span><input type="text" name="FirstName" style="width:30%;height:5%;" required/><br><br>
+<span style="font-size:20px"><b><i>LastName:     </i></b></span><input type="text" name="LastName" style="width:30%;height:5%;" required/><br><br>
+<span style="font-size:20px"><b><i>UserName:     </i></b></span><input type="text" name="username" style="width:30%;height:5%;" required/><br><br>
+<span style="font-size:20px"><b><i>Email:        </i></b></span><input type="Email" name="email" style="width:30%;height:5%;" required/><br><br>
+<span style="font-size:20px"><b><i>Password:     </i></b></span><input type="password" name="Password" style="width:30%;height:5%" minlength=8 maxlength=32 required/><br><br>
+			     <input type="submit" value="Create an account">
+	  </pre>
+	 </div>
+	</fieldset>
+	</center>
+	</div>
+	
+ 	<script type="text/javascript">
+      	sessionStorage.clear();
+      	function doValidations(lgnfrm) 
+      	{
+      	  if (lgnfrm.password.value.length < 8 || lgnfrm.password.value.length > 32) {
+      	    notie.alert(2, 'Your password must be at least 8 characters and max. 32 characters long. Try again.', 5);
+      	    lgnfrm.password.focus();
+      	    return false;
+       	 } 
+       	 if (lgnfrm.password.value.indexOf(' ') > -1) {
+       	   notie.alert(2, 'Sorry, space is not allowed in the password. Try again.', 5);
+          lgnfrm.password.focus();
+       	   return false;
+        }
+        return true;
+      }
+    </script>
+</form>
+</body>
+</html>

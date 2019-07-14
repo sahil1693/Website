@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>play it </title>
+<style>
+span{
+color:black;
+}
+.top-wrapper{
+padding: 100px 50 100px 50;
+  background-size: cover;
+  text-align: center;
+color:black;
+}
+
+</style>
+</head>
+<body>
+	<div class="top-wrapper">
+	<center>
+	<fieldset style="width:50%; background-color:lightgrey; padding: 20px 40px;">
+	<legend><i><b><span style="font-size:25px; ">Log into your account</span></b></i></legend>
+	  <div class="container">
+		<form action="login.php" onsubmit="return doValidations(this)">
+	<pre>
+<span style="font-size:20px"><b><i> Email:    </i></b></span><input type="Email" name="email" id="email" style="width:30%;height:5%;" required/><br><br>
+<span style="font-size:20px"><b><i>Password:  </i></b></span><input type="password" name="Password" id="password" style="width:30%;height:5%"minlength=8 maxlength=32 required/><br><br>
+<i><b><input type="submit" value="LOG IN"></b></i>
+	  </pre>
+	 </div>
+	</fieldset>
+	</center>
+	</div>
+	
+ 	<script type="text/javascript">
+      	sessionStorage.clear();
+      	function doValidations(lgnfrm) 
+      	{
+      	  if (lgnfrm.password.value.length < 8 || lgnfrm.password.value.length > 32) {
+      	    notie.alert(2, 'Your password must be at least 8 characters and max. 32 characters long. Try again.', 5);
+      	    lgnfrm.password.focus();
+      	    return false;
+       	 } 
+       	 if (lgnfrm.password.value.indexOf(' ') > -1) {
+       	   notie.alert(2, 'Sorry, space is not allowed in the password. Try again.', 5);
+          lgnfrm.password.focus();
+       	   return false;
+        }
+        return true;
+      }
+    </script>
+</form>
+</body>
+</html>

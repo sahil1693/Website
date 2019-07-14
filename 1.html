@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Play It!</title>
+	<style type="text/css">
+	.wrap	{
+		display:inline-block;
+		border:2px solid black;
+	  	width:75%;
+		margin-left:12.5%;
+		color: white;
+	  	
+	}
+	.card 	{
+  	  	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+  	  	width: 200px;
+   	  	text-align:center;
+  	  	font-size:16px;
+    		font-family: 'Raleway', sans-serif;
+   	  	float:left;
+  	  	color: black;
+		background-color:white;
+  	  	margin:25px;
+  	  	display:inline-block;
+		border-radius: 10px;
+		
+	}
+	.thefront{
+		
+ 		width: 200px;
+		height:400px;
+	}
+	a{
+	color:white;
+	}
+	li{
+	float:left;
+	}	
+	body{
+	position:absolute;
+	}
+	</style>
+</head>
+
+<body>
+<div class="body1">
+<div class="wrap">
+	<ul>
+	<li>
+        <div class="card">
+		<div class="thefront">
+			<img src="wake_me_up.png" style="width:100%;">
+                    		<h3>Wake Me Up</h3> 
+    				AVICII 
+				<audio style="width:200px; height:65px;" controls src="Wake Me Up.mp4"> </audio>
+				<br><br><button onclick="din('Wake Me Up.mp4')">Play Video</button>	
+			</div>	
+		</div>
+        </li>
+        <li>
+        <div class="card">
+		<div class="thefront">
+			<img src="despacito.png" style="width:100%">	
+                    		<h3>Despacito</h3> 
+    				Luis Fonsi
+				<audio style="width:200px; height:65px;" controls src="Despacito.mp4"> </audio><br>
+				<br><button onclick="din('Despacito.mp4')">Play Video</button> 
+  		</div>	
+	</div>
+        </li>
+        <li>
+        <div class="card">
+		<div class="thefront">
+			<img src="see_you_again.png" style="width:100%">	
+                    		<h3>See You Again</h3> 
+    				Wiz Khalifa 
+				<audio style="width:200px; height:65px;" controls src="See You Again.mp4"> </audio><br>
+				<br><button onclick="din('See You Again.mp4')">Play Video</button>
+  			</div>	
+		</div>
+</li>
+<li>
+        <div class="card">
+		<div class="thefront">
+			<img src="uptown_funk.png" style="width:100%">		
+                  		<h3>Uptown Funk</h3> 
+    				Mark Ronson 
+				<audio style="width:200px; height:65px;" controls src="Uptown Funk.mp4"> </audio><br>
+				<br><button onclick="din('Uptown Funk.mp4')">Play Video</button> 
+  			</div>	
+		</div>   
+</li>
+<li>
+        <div class="card">
+		<div class="thefront">
+			<img src="sorry.png" style="width:100%">		
+                    		<h3>Sorry</h3> 
+    				Justin Bieber 
+				<audio style="width:200px; height:65px;" controls src="Sorry.mp4"> </audio><br>
+				<br><button onclick="din('Sorry.mp4')">Play Video</button>
+  			</div>	
+		</div>
+</li>
+<li>
+        <div class="card">
+		<div class="thefront">
+			<img src="shape_of_you.png" style="width:100%">		
+                    		<h3>Shape of You</h3> 
+    				Ed Sheeran
+				<audio style="width:200px; height:65px;" controls src="Shape of You.mp4"> </audio><br>
+				<br><button onclick="din('Shape of You.mp4')">Play Video</button> 
+  			</div>	
+		</div>
+        </li>
+        <li>
+        <div class="card">
+		<div class="thefront">
+			<img src="sugar.png" style="width:100%">	
+                 		<h3>Sugar</h3> 
+    				Maroon 5
+				<audio style="width:200px; height:65px;" controls src="Sugar.M4a"> </audio><br>
+				<br><button onclick="din('Sugar.M4a')">Play Video</button> 
+  			</div>	
+		</div> 
+</li>
+<li>
+        <div class="card">
+		<div class="thefront">
+			<img src="counting_stars.png" style="width:100%">		
+                    		<h3>Counting Stars</h3> 
+    				One Republic
+				<audio style="width:200px; height:65px;" controls src="Counting Stars.mp4"> </audio><br>
+				<br><button onclick="din('Counting Stars.mp4')">Play Video</button> 
+  			</div>	
+		</div>
+        </li>
+        </ul>
+ </div>
+</div>
+<br>
+<br>
+<div style="overflow:hidden">
+<div id="video1" align="center" style="margin-top:40px;margin-left:380px;display:none;position:relative">
+<video  id="video2" controls  src="F:\songs\AADAT.mkv" width=600px onpause="fun1()"> </video>
+</div>
+</div>
+<script>
+function din(ven)
+{	
+	var x=document.getElementById('video1');
+	var y=document.getElementById('video2');
+	var z=document.getElementsByClassName('body1')[0];
+	document.getElementsByTagName("video")[0].removeAttribute("src");
+	document.getElementsByTagName("video")[0].setAttribute("src",ven);
+	z.style.display="none";
+	y.play();
+	x.style.display="block";
+}
+function fun1()
+{
+	var x=document.getElementById('video1');
+	x.style.display="none";
+	var z=document.getElementsByClassName('body1')[0];
+	z.style.display="block";
+}
+</script>
+</body>
+</html>
